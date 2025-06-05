@@ -1,0 +1,68 @@
+INTRODUCCIÓN A REACT
+
+que es -> Librería de JS
+
+    * MODELO DE COMPONENTES REUTILIZABLES
+    * Uso del VIRTUAL DOM
+    
+Importación de REACT
+
+import React from 'react';
+
+
+CREACIÓN DE UN PROYECTO CON VITE
+
+npm create vite@latest nombre-del-proyecto --template react
+
+npm install -> PARA LA INTALACIÓN DE DEPENDENCIAS (debe ser dentro de la carpeta que recién creamos)
+
+npm run dev -> Para ejecutar el proyecto
+
+
+¿QUÉ ES UNA COMPONENTE?
+
+    Función de js que:
+        * Devuelve código JSX (JavaScript XML)
+
+    Tipos:
+        * Funcionales
+        * De clase
+
+JSX -> NO ES HTML
+    -> Es código interpretado por REACT
+
+
+Estados -> Objeto de un COMPONENTE
+        -> Puede cambiar su valor con el tiempo
+
+Props -> Datos que se pasan de un COMPONENTE PADRE -> HIJO
+
+FUNCTIONAL COMPONENTS EN REACT
+
+    Recordar que : App.js es el documento JS de todos los demás.
+
+Ejemplo: Creamos un componente en el archivo Mensaje.js
+
+    function Mensaje(){
+        return <p>ALgo</p>
+    }
+
+    export default Mensaje(Nombre de la función);
+
+    Se procede a importar el componente en el App.js
+
+    import Mensaje from './Mensaje'
+
+    function App(){
+        return (
+            <div>
+                <h1>Mi aplicación</h1>
+                <Mensaje/>
+            </div>
+        );
+    }
+
+    export default App;
+
+
+NOTA: DENTRO DE LOS ARCHIVOS DE TIPO JSX, EL CÓDIGO JS QUE SE ESCRIBA DENTRO DE LA SINTAXIS DE JSX VA ENTRE {}
