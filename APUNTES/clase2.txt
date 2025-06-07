@@ -1,0 +1,43 @@
+PROPS -> properties
+    Forma para enviar datos de PADRE -> HIJO
+
+Desde el HIJO una PROP ES INMUTABLE
+Desdesde el PADRE una PROP ES MUTABLE
+
+Maneras de recibir una PROP:
+
+    function TarjetaUsuario({dato1, dato2, ..., daton}){
+        ...
+    }
+
+    function TarjetaUsuario(soyUnObjeto){
+        ...
+    }
+
+Envío de una PROP:
+
+    <TarjetaUsuario dato1="cksjk" dato2="cksjk" ... daton="cksjk"/>
+
+
+PARA ESCRIBIR ESTILOS EN LÍNEA:
+    * Cada propiedad usa camelCase
+    * Se escribe con un OBJETO DE JS
+
+
+
+HOOKS EN REACT -> FUNCIONES ESPECIALES
+
+    * Permiten enganchar una función A CARACTERÍSTICAS DE REACT
+    * Siempre inician con la calabra USE
+
+HOOKS COMUNES:
+
+    * useState -> Maneja el ESTADO DE LOS COMPONENTES FUNCIONALES
+    * useEffect -> Maneja efectos SECUNDARIOS (llamadas a API O MANIPULACIÓN DEL DOM).
+    * useReducer -> Como useState pero con datos más COMPLEJOS
+    * useContext
+    * useRef
+
+useState
+
+    const [variable, funciónParaManipularla] = useState(Valor Inicial)
