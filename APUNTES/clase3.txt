@@ -1,0 +1,56 @@
+
+HOOK useEffect
+
+Ejecución de EFECTOS SECUNDARIOS (ACCIONES POST RENDERIZACIÓN)
+
+    CODIGO:
+
+        import { useEffect } from "react":
+
+        useEffect(() => {
+            // CÓDIGO A EJECUTAR
+        })
+
+        Si nosotros agregamos la función de LIMPIEZA (función de retorno) es porque en el useEffect CREAMOS ALGO.
+
+    NOTA: SEGUNDO AGUMENTO DEL useEffect = CUANDO DEBE EJECUTARSE EL useEffect.
+
+        * SI NO TIENE => SE REALIALIZA CADA QUE SE MONTE.
+        * SI LE PASAMOS [] => SE REALIZA 1 VEZ
+        * SI SE PASAN [VARIABLE 1, ..., VARIABLE N] => SE EJECUTA CADA QUE VARIABLE i CAMBIE.
+
+
+LIMPIEZA DE EFECTOS EN useEffect => PARA EVITAR PROBLEMAS DE FUGA DE MEMORIA.
+
+    * Se debe de devolver una función antes de DESMONTAR EL HOOK o ANTES DE EJECUTAR EL EFECTO.
+
+
+HOOK useMemo - NO RECIBE ARGUMENTOS
+
+IMPORTANTE: Si ponemos llaves a nuestra función, que no olvidemos poner la PALABRA RESERVADA RETURN.
+
+* Permite la memorización de los procesos
+* Evitando recalcularlos
+* Simpre y cuando las dependencias no hayan cambiado.
+
+SINTAXIS DE useMemo
+
+const memorizedValue = useMemo (() => {
+    
+    //CÁLCULO COSTOSO
+
+    return value;
+}, [dependencias]);
+
+    DEPENDENCIAS => VARIABLES QUE EN CASO DE CAMBIAR SE HARÁ UN RECÁLCULO DE LAS OPERACIONES COSTOSAS.
+
+
+
+Nota: Si se existe algún componente que no se esté visualizando SE MANTIENE DESMONTADO, de lo contrario SE MONTA, no se recomienda ELIMINARLO.
+
+
+CICLO DE VIDA DE UN COMPONENTE
+
+* Montaje
+* Actualización
+* Desmontaje

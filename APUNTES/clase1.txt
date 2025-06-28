@@ -1,4 +1,11 @@
-INTRODUCCIÓN A REACT
+NINTRODUCCIÓN A REACT
+
+* SE DEFINE UN ARCHIVO => CONTIENE UN COMPONENTE FUNCIONAL
+* UTILIZAR PROGRAMACIÓN FUNCIONAL
+    * Se dan los parámetros propios del módulo
+
+XML => lenguaje de marcado extensible
+    USA LAS ETIQUETAS PROPIAS DE HTML + NUEVAS QUE NOSOTROS NECESITEMOS
 
 que es -> Librería de JS
 
@@ -12,12 +19,21 @@ import React from 'react';
 
 CREACIÓN DE UN PROYECTO CON VITE
 
-npm create vite@latest nombre-del-proyecto --template react
+npm create vite@latest nombre-del-proyecto --  --template react
 
 npm install -> PARA LA INTALACIÓN DE DEPENDENCIAS (debe ser dentro de la carpeta que recién creamos)
 
 npm run dev -> Para ejecutar el proyecto
 
+
+NOTA: SE OUCUPA REQUIRE CUANDO NOS DEVUELVE ALGO EN GENERAL (TODO EL PAQUETÓN)
+    import => (SIEMPRE SE OCUPA ASÍ REACT) SE IMPORTAN COSAS PARTICULARES NO TODO
+
+script (DEL TIPO MODULO) del index.html => ES EL QUE VA A DIBUJAR TODO EN EL HTML
+
+DOM => ARBOL DE NODO DE DIBUJOS 
+
+tailwind => FRAMEWORK DE CSS
 
 ¿QUÉ ES UNA COMPONENTE?
 
@@ -66,3 +82,42 @@ Ejemplo: Creamos un componente en el archivo Mensaje.js
 
 
 NOTA: DENTRO DE LOS ARCHIVOS DE TIPO JSX, EL CÓDIGO JS QUE SE ESCRIBA DENTRO DE LA SINTAXIS DE JSX VA ENTRE {}
+
+
+
+NOTA: Cuando se IMPORTAN componentes ya sea personalizados o no personalizados en REACT, siguen esta sintáxis:
+
+    * </NOMBREDELCOMPONENTE>
+
+NOTA: Cuando queremos RETORNAR varios componentes HTML se ENCAPSULAN EN LA ETIQUETA FRAGMENT <>...</>
+
+REACT ES DECLARATIVA PORQUE SE DICE CÓMO VA A RESPONDER Y LO QUE DEBE DE EXISTIR EN EL COMPONENTE INCLUSO ANTES DE HABERLO LLAMADO.
+
+
+NOTA : Para renombrar una variable luego de un DESESTRUCTUTRACIÓN
+
+    nombre de la variable : NUEVO NOMBRE DE LA VARIABLE
+
+
+NOTA : EN LUGAR DE CLASS SE PONE CLASSNAME
+
+NOTA : PARA PONER COMETARIOS EN EL JSX ALT + SHIFT + A
+
+PARA INTALAR TAILWIND : SEGUIR LA DOCUMENTACIÓN DE tailwindcss.com/docs/installation/using-vite
+
+    * EL IMPORT DE CSS SE PONE EN EL DOC DE CSS MÁS EXTERNO
+    * CREATIVE TIM : COMUNIDAD QUE COMPARTE CÓDIGO CON TAILWIND
+
+
+
+CREACIÓN DE UN PROYECTO: LAS BUENAS PRACTICAS MENCIONAN QUE:
+
+    * CREAR CARPETA COMPONENTS DENTRO DE SRC 
+
+EXPORTAR COMPONENTE
+
+    * export default NOMBREDELCOMPONENTE
+    * import NOMBREDELCOMPONENTE from "url relativa del componente ./components/NOMBREDELCOMPONENTE"
+
+
+NOTA IMPORTANTE : REVISAR QUE EN VITE CONFIG ESTÉN TANTO EL TAILWIND IMPORTADO Y EL REACT IMPORTADO ASÍ COMO react(), tailwind() DENTRO DE UN ARREGLO EN PLUGINS

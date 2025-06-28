@@ -29,6 +29,7 @@ HOOKS EN REACT -> FUNCIONES ESPECIALES
 
     * Permiten enganchar una función A CARACTERÍSTICAS DE REACT
     * Siempre inician con la calabra USE
+    * Se modifican sus valores sólo con LA FUNCIÓN
 
 HOOKS COMUNES:
 
@@ -41,3 +42,15 @@ HOOKS COMUNES:
 useState
 
     const [variable, funciónParaManipularla] = useState(Valor Inicial)
+
+
+ESTADO DEL COMPONENTE - Los métodos de un componente funcional viéndolos como LOS ESTADOS ADQUIEREN
+
+    ejemplo con botón:
+        * Luego de que fue clickeado el botón, el ESTADO DEL BOTÓN es CLICKEADO
+
+    * ESTADO SE MANEJA DESDE EL COMPONENTE - no desde el padre
+    * TODO LO QUE CAMBIE EN NUESTRA PÁGINA DEBE DE TENER UN ESTADO.
+
+
+    
