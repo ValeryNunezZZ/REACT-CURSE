@@ -1,0 +1,21 @@
+ETAPAS DE VIDA DE UN COMPONENTE
+
+    Se simulan con useEffect:
+
+        1. Montaje: Se agrega al DOM
+        2. Actualización: se RENDERIZA
+        3. Desmontaje: Se quita del DOM
+            Puede ocuparse el return( función de limpieza ) del useEffect
+
+HOOKS -> Funciones ESPECIALES
+
+    Se ENGANCHAN A :
+        Ciclo de VIDA
+        Estado de un componente
+
+
+    EJEMPLOS:
+
+    1. useState: Le establece un estado a un COMPONENTE
+    2. useEffect: Efecto secundario que NO ESTÀ relacionado DIRECTAMENTE con el COMPONENTE.
+    3. useContext: Exporta propiedades de componentes hijos a todo su arbol.
