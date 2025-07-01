@@ -1,0 +1,80 @@
+
+CONDITIONAL RENDERING - Esconder o mostrar componentes según una condición
+
+FORMAS:
+
+    + Operador tenario: Mas simple (condicion ? true : false)
+    + && (Operador AND): Se ocupa sólo si NO HAY CONDICIÓN ELSE
+    + SENTENCIA SWITCH
+    + If and Else
+
+
+COMPOSICIÓN DE COMPONENTES
+
+Dividir las partes de una pàgina en partes más pequeñas
+
+
+PROPS.CHILDREN - COMPONENTES PUEDEN TENER ELEMENTOS DENTRO
+
+    EJEMPLO: 
+    
+        function Card({ children }) {
+
+        return (
+
+            <div style={{ border: '1px solid black', padding: '10px', borderRadius: '5px' }}>
+
+            {children}
+
+            </div>
+
+        );
+
+        }
+
+        function App() {
+
+        return (
+
+            <Card>
+
+            <h2>Título dentro de Card</h2>
+
+            <p>Este es un contenido dentro de la tarjeta.</p>
+
+            </Card>
+
+        );
+
+        }
+
+
+COMPONENTES ESPECIALIZADOS
+
+Ayuda mucho en la reutilización de componentes
+
+    EJEMPLO:
+
+        function Modal({ title, content }) {
+
+        return (
+
+            <div style={{ border: '1px solid gray', padding: '20px', backgroundColor: 'lightgray' }}>
+
+                <h2>{title}</h2>
+
+                <p>{content}</p>
+
+            </div>
+
+            );
+
+        }
+
+        function App() {
+
+        return <Modal title="Aviso" content="Este es un mensaje importante." />;
+
+        }
+
+        export default App;
