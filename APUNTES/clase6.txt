@@ -1,0 +1,53 @@
+
+Nota: Se pueden meter condicionales a las clases de los ELEMENTOS (en className)
+
+Dentro de los returns sólo podemos enviar EXPRESIONES (siempre devuelven algo) PERO NO SENTENCIAS
+
+    Solución => METER LA SENTENCIA EN UNA FUNCIÓN FLECHA O SACARLA Y HACERLA UNA FUNCIÓN
+
+    Tener cuidado con las funciones FLECHA que verdaderamente estemos haciendo RETURN
+
+
+Nota: Se recomienda no modificar el estado de un COMPONENTE EN OTRO COMPONENTE
+
+    Si estamos haciendo eso se recomienda refactorizar esa oarte del proyecto
+
+
+
+HOOK AVANZADOS
+
+useRef -> Da seguimiento a:
+    * Ciertos elementos del DOM. 
+    * Comportamiento del usuario.
+    * Valores que no afectan el estado del componente.
+
+NOTA: Si nostros tenemos codigo fuera de una función pero dentro de nuestro componenete es código que se va a ejecutar en cada renderización (obviamente tiene que ser una expresión).
+
+
+SIEMPRE QUE NO SE DESMONTE EL COMPONENTE VA A PREVALECER EL VALOR DE:
+
+    * useState
+    * useRef
+
+    USE REF VS USE STATE:
+
+        Con useState no se puede hacer REFERENCIA DIRECTA A UN ELEMENTO DEL DOM. 
+        Es independiente del renderizado. Ejemplo:
+
+            Queremos cambiar el valor de una variable pero no queremos que se esté redibujando a cada rato el componente.
+
+
+useCallback (Sintáxis) -> const cachedFn = useCallback(Fn, dependecies)
+
+    Use callback sirve cuando tu quieres memoizar el funcionamiento
+
+    Las dependecies SON VALORES DE LOS QUE DEPENDE LA FUNCIÓN
+
+    -> Skipea el renderizado innecesario (Pues de memoriza la función)
+    -> Se recomienda se uso cuando se pasa una función DE UN PADRE A UN CHILD
+        -> Ayuda en la centraliación de las funciones
+    -> Cuando quieres una dependecia dinámica
+    -> Cuando queremos mantener las referencias estables ( por ejemplo cuando pasamos una función a un hijo y esa vez a un hijo y así sucesivamente muchas veces )
+
+
+    useRef
