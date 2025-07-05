@@ -1,0 +1,31 @@
+MANEJO DE RUTAS
+
+intalación -> npm install react-router-dom / npm i react-router-dom
+
+
+layout -> Templates que son estáticas para ciertas vistas
+
+
+EL CARGADO DE LOS COMPONENTES AHORA ES MÁS RÁPIDO PUES DESDE EL INICIO REACT YA TIENE TODO EL VIRTUAL DOM CARGADO OPTIMIZANDO MUCHO LA NAVEGACIÓN AÚN Y CUANDO EN CADA NAVEGACIÓN SE TENGA QUE MONTAR Y DESMONTAR EL COMPONENTE
+
+NOTA: Al menos para el ejemplo se tienen estas partes
+
+-> Estblecimiento de RUTAS con createRouterBorwser (Que es un enrutador específico para navegdores).
+
+-> Pasado de rutas al ROUTER (RouterProvider)
+
+-> Nav Bar con el NavBar
+
+-> Outlet para el redibujado de todos los componentes que no son la navbar 
+
+PARTES DE UN ENRUTAMIENTO
+
+    * RUTAS
+    * BROWSER ROUTER
+    * VISTAS
+
+
+FRAMEWORK
+
+Conjunto de HERRAMIENTAS, REGLAS y RETRICCIONES que buscan lograr un PRODUCTO ESTANDARIZADO
+

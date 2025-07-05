@@ -21,7 +21,11 @@ useRef -> Da seguimiento a:
     * Comportamiento del usuario.
     * Valores que no afectan el estado del componente.
 
+NOTA: Con useRef NO SE VA A RENDERIZAR EL COMPONENTE
+
 NOTA: Si nostros tenemos codigo fuera de una función pero dentro de nuestro componenete es código que se va a ejecutar en cada renderización (obviamente tiene que ser una expresión).
+
+Nota: Para valores "globales" o variables que van a cambiar pero eso no debería de cambiar la interfaz, es más un valor que debe de permanecer "oculto".
 
 
 SIEMPRE QUE NO SE DESMONTE EL COMPONENTE VA A PREVALECER EL VALOR DE:
@@ -39,7 +43,9 @@ SIEMPRE QUE NO SE DESMONTE EL COMPONENTE VA A PREVALECER EL VALOR DE:
 
 useCallback (Sintáxis) -> const cachedFn = useCallback(Fn, dependecies)
 
-    Use callback sirve cuando tu quieres memoizar el funcionamiento
+    Use callback sirve cuando tu quieres memoizar el funcionamiento CON EL FIN DE:
+
+    QUE NO SE REDIBUJE EL COMPONENTE AL QUE SE LE ESTÁ PASANDO LA FUNCIÓN
 
     Las dependecies SON VALORES DE LOS QUE DEPENDE LA FUNCIÓN
 
@@ -50,4 +56,11 @@ useCallback (Sintáxis) -> const cachedFn = useCallback(Fn, dependecies)
     -> Cuando queremos mantener las referencias estables ( por ejemplo cuando pasamos una función a un hijo y esa vez a un hijo y así sucesivamente muchas veces )
 
 
-    useRef
+useReducer
+
+sintáxis -> const[dispatch] = useReducer(funciónHandler, estadoInicial )
+
+    estadoInicial -> Generalmente un objeto
+    dispatch -> la que manda llamar al funciónHandler
+
+        dispatch({podemos agregar los elementos que querramos})
